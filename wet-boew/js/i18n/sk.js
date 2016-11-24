@@ -7,7 +7,6 @@
  */
 ( function( wb ) {
 "use strict";
-
 /* main index */
 wb.i18nDict = {
 	"lang-code": "sk",
@@ -72,7 +71,6 @@ wb.i18nDict = {
 	"tab-pnl-end2": "Návrat na kartu zoznamu",
 	"tab-pnl-end3": "alebo pokračovať až do konca stránky.",
 	"tab-play": "Hrať",
-
 	/* Multimedia player */
 	"mmp-play": "Hrať",
 	pause: "Pauza",
@@ -94,7 +92,6 @@ wb.i18nDict = {
 	},
 	pos: "Aktuálna pozícia:",
 	dur: "Celkový čas:",
-
 	/* Share widget */
 	"shr-txt": "Zdieľať",
 	"shr-pg": " túto stránku",
@@ -102,17 +99,14 @@ wb.i18nDict = {
 	"shr-aud": " tento audio súbor",
 	"shr-hnt": " s {s} ",
 	"shr-disc": "Č schválenie akýchkoľvek výrobkov alebo služieb je vyjadrené alebo predpokladané.",
-
 	/* Form validation */
 	"frm-nosubmit": "Formulár nemožno predložené, pretože ",
 	"errs-fnd": " chyby boli nájdené.",
 	"err-fnd": " chyba bola nájdená.",
-
 	/* Date picker */
 	"date-hide": "Skryť kalendár",
 	"date-show": "Vyberte dátum z kalendára pre pole",
 	"date-sel": "Vybraný",
-
 	/* Calendar */
 	days: [
 		"Nedeľa",
@@ -147,16 +141,13 @@ wb.i18nDict = {
 	"cal-goToBtn": "Ísť",
 	prvMnth: "Predchádzajúci mesiac: ",
 	nxtMnth: "Budúci mesiac: ",
-
 	/* Lightbox */
 	"lb-curr": "Bod %curr% %total%",
 	"lb-xhr-err": "Tento obsah sa nepodarilo načítať.",
 	"lb-img-err": "Tento obrázok sa nepodarilo načítať.",
-
 	/* Charts widget */
 	"tbl-txt": "Tabuľka",
 	"tbl-dtls": "Graf. Podrobnosti v nasledujúcej tabuľke.",
-
 	/* Session timeout */
 	"st-to-msg-bgn": "Vaša relácia vyprší automaticky #min# min #sec# sec.",
 	"st-to-msg-end": "Zvoľte \"Pokračovať v relácii\" rozšíriť reláciu.",
@@ -164,14 +155,12 @@ wb.i18nDict = {
 	"st-alrdy-to-msg": "Je nám ľúto, váš relácie už vypršala. Prosím, prihláste sa znova.",
 	"st-btn-cont": "pokračovať v relácii",
 	"st-btn-end": "Ukončiť reláciu teraz",
-
 	/* Toggle details */
 	"td-toggle": "Prepnúť všetky",
 	"td-open": "Rozbaliť všetko",
 	"td-close": "Zbaliť všetko",
 	"td-ttl-open": "Rozbaliť všetky časti obsahu",
 	"td-ttl-close": "Minimalizovať všetky časti obsahu",
-
 	/* Table enhancement */
 	sortAsc: ": aktivuje na vzostupne zoradiť",
 	sortDesc: ": aktivujte pre zostupné radenie",
@@ -182,7 +171,6 @@ wb.i18nDict = {
 	info1000: "&#160;",
 	lenMenu: "Zobraziť _MENU_ položiek",
 	filter: "Filtrovanie položiek",
-
 	/* Geomap */
 	"geo-mapctrl": "@geo-mapctrl@",
 	"geo-zmin": "Priblížiť",
@@ -196,14 +184,14 @@ wb.i18nDict = {
 	"geo-allyttl": "Návod: Mapa navigácie",
 	"geo-tgllyr": "Prepnúť zobrazenie vrstvy",
 	"geo-hdnlyr": "Táto vrstva je v súčasnej dobe skrýva!",
-	"geo-bmapurl": "//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg",
+	"geo-bmapurl": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg",
 	"geo-bmapttl": "BaseMaps_CBMT3978",
 	"geo-bmapurltxt": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_TXT_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg",
-	"geo-attrlnk": "//geogratis.gc.ca/geogratis/CBM_CBC?lang=en",
+	"geo-attrlnk": "http://geogratis.gc.ca/geogratis/CBM_CBC?lang=en",
 	"geo-attrttl": "GeoGratis - Kanada základná mapa (len po anglicky alebo francúzsky)",
 	"geo-sel": "Vybrať",
 	"geo-lblsel": "Skontrolujte, vyberte prvok na mape",
-	"geo-locurl-geogratis": "//geogratis.gc.ca/services/geolocation/en/locate",
+	"geo-locurl-geogratis": "http://geogratis.gc.ca/services/geolocation/en/locate",
 	"geo-loc-placeholder": "Uveďte názov miesta&#44; poštové smerovacie číslo&#44; adresu (poštové)&#44; počet NTS ...",
 	"geo-loc-label": "Umiestnenie",
 	"geo-aoi-north": "Sever",
@@ -217,14 +205,11 @@ wb.i18nDict = {
 	"geo-geoloc-fail": "Lokalita zlyhalo. Uistite sa, že umiestnenie služby sú povolené.",
 	"geo-geoloc-uncapable": "Lokalizácia nie je podporovaná vo vašom prehliadači.",
 	"geo-lgnd-grphc": "Legenda grafický pre mapovú vrstvu.",
-
 	/* Disable/enable WET plugins and polyfills */
-	"wb-disable": "Switch to basic HTML version",
-	"wb-enable": "Switch to standard version",
-
+	"wb-disable": "Základné HTML verzia",
+	"wb-enable": "Štandardná verzia",
 	/* Dismissable content */
 	"dismiss": "Dismiss",
-
 	/* Template */
 	"tmpl-signin": "Prihlásiť"
 };

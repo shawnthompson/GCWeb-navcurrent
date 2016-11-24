@@ -43,6 +43,8 @@ var componentName = "wb-tableparser",
 			spannedRow = [],
 			tableCellWidth = 0,
 			headerRowGroupCompleted = false,
+			summaryRowGroupEligible = false,
+			currentRowHeader = [],
 			currentTbodyID,
 			theadRowStack = [],
 			stackRowHeader = false,
@@ -306,7 +308,7 @@ var componentName = "wb-tableparser",
 			var i, iLen, j, jLen, m, mLen,
 				tmpStack = [], tmpStackCurr, tmpStackCell,
 				dataColgroup, dataColumns, colgroup, col,
-				hcolgroup, currColPos,
+				hcolgroup, lstRealColgroup, currColPos,
 				currColgroupStructure, colFrmId, bigTotalColgroupFound,
 				theadRSNext, theadRSNextCell, cell, gzCol, theadRS;
 
@@ -585,6 +587,7 @@ var componentName = "wb-tableparser",
 				// -----------------------------------------------------
 				//
 				// List of real colgroup
+				lstRealColgroup = [];
 				currColPos = (
 					colgroupHeaderColEnd === 0 ?
 						1 :
@@ -1150,7 +1153,9 @@ var componentName = "wb-tableparser",
 				colKeyCell,
 				i,
 				j,
-				isDataColgroupType;
+				isDataCell,
+				isDataColgroupType,
+				createGenericColgroup;
 
 			$( elem ).data().tblparser = row;
 
@@ -1559,6 +1564,7 @@ var componentName = "wb-tableparser",
 
 						// Remove any rowgroup header found.
 						rowgroupHeaderRowStack = [];
+						currentRowHeader = [];
 
 						currentTbodyID += 1;
 						finalizeRowGroup();
@@ -1592,6 +1598,7 @@ var componentName = "wb-tableparser",
 
 						// Remove any rowgroup header found.
 						rowgroupHeaderRowStack = [];
+						currentRowHeader = [];
 
 						currentTbodyID += 1;
 						finalizeRowGroup();
@@ -1778,6 +1785,7 @@ var componentName = "wb-tableparser",
 					row.datacell = [];
 				}
 				for ( i = lastHeadingColPos; i < row.cell.length; i += 1 ) {
+					isDataCell = true;
 					isDataColgroupType = true;
 
 					for ( j = ( lastHeadingColPos === 0 ? 0 : 1 ); j < colgroupFrame.length; j += 1 ) {
@@ -1829,6 +1837,11 @@ var componentName = "wb-tableparser",
 							}
 						}
 					}
+				}
+
+				createGenericColgroup = ( colgroupFrame.length === 0 );
+				if ( colgroupFrame.length === 0 ) {
+					createGenericColgroup = false;
 				}
 
 				// Add the cell in his appropriate column
@@ -1888,6 +1901,7 @@ var componentName = "wb-tableparser",
 						}
 					}
 				}
+				summaryRowGroupEligible = true;
 			}
 			currentRowLevel += 1;
 
@@ -2191,6 +2205,7 @@ var componentName = "wb-tableparser",
 
 				spannedRow = []; /* Cleanup of any spanned row */
 				rowgroupHeaderRowStack = []; /* Remove any rowgroup header found. */
+				currentRowHeader = [];
 
 				currentTbodyID += 1;
 			} else if ( nodeName === "tr" ) {
